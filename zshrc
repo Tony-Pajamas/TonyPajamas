@@ -84,7 +84,14 @@ fi
 
 #PS1 Control
 
-CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' )
+# Main IP
+#CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' )
+
+# Multiple IP
+CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n -e 'H;${x;s/\n/, /g;s/^,//;p;}' )
+
+# IP Off
+#CURRENTIP=''
 
 if [ "$color_prompt" = yes ]; then
     #PROMPT=$'%F{%(#.red.green)}┌──${debian_chroot:+($debian_chroot)──}$(venv_info)(%B%F{%(#.cyan.blue)}%n%(#.💀.㉿)%m%b%F{%(#.red.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.red.green)}]\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
