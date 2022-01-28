@@ -85,11 +85,11 @@ fi
 #PS1 Control
 
 # Main IP
-#CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' )
+CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' )
 
 # Multiple IP
 #CURRENTIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/|/g;p};ba' )
-CURRENTIP=$(ifconfig | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/|/g;p};ba' )
+#CURRENTIP=$(ifconfig | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/|/g;p};ba' )
 
 # IP Off
 #CURRENTIP=''
