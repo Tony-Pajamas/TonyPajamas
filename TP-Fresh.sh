@@ -117,7 +117,7 @@ function TP {
 
 	if cat /etc/shells | grep bash >/dev/null; then
 		#rc="$HOME/.bashrc"
-		sprint ? "BASH installed: cp /opt/TonyPajamas/Mains/bashrc /root/.bashrc"
+		sprint ? "BASH installed: cp /opt/TonyPajamas/bashrc /root/.bashrc"
 	else
 		sprint - "No BASH installed"
 		return 1
@@ -125,7 +125,7 @@ function TP {
 
 	if cat /etc/shells | grep zsh >/dev/null; then
 		#rc="$HOME/.bashrc"
-		sprint ? "ZSH installed: cp /opt/TonyPajamas/Mains/zshrc /root/.zshrc"
+		sprint ? "ZSH installed: cp /opt/TonyPajamas/zshrc /root/.zshrc"
 	else
 		sprint - "No ZSH Installed"
 		return 1
