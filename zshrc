@@ -216,11 +216,15 @@ alias ipc='ip -c -br addr'
 alias simple='python /root/Works/Mains/SimpleHTTPServerWithUpload.py'
 alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN"'
 alias public='curl https://checkip.amazonaws.com/'
+alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git'
 
 #TP Tool Aliases
 alias LDAPtoHTTP='bash /root/Works/Mains/LDAPtoHTTP.sh'
-alias Drop-Connect-1='ssh kv@localhost -p 9001' #Dropbox Connections
-alias Drop-Connect-2='ssh kv@loclahost -p 9002' #Dropbox Connections
+alias Drop-1='ssh kv@localhost -p 9001' #Dropbox Connections
+alias Drop-2='ssh kv@loclahost -p 9002' #Dropbox Connections
+alias ToDrop-1='/root/Works/Mains/CloudToDrop.sh'
+alias ToDrop-2='/root/Works/Mains/CloudToDrop.sh'
+alias ToCloud-1='/root/Works/Mains/DropToCloud.sh'
 
 
 # enable auto-suggestions based on the history
