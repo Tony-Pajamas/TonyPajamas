@@ -136,6 +136,18 @@ function TP {
 	echo ""
 }
 
+function banner {
+
+	#Update Clean  Banner
+	
+	#cp /etc/motd /etc/motd.old
+	#echo "" > /etc/motd
+	#echo "      " >> /etc/motd
+	#echo "Testing Machine" >> /etc/motd
+	#echo "" >> /etc/motd
+	#echo "" >> /etc/motd
+}
+
 ########## Main ##########
 
 initial
