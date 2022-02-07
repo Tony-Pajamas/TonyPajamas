@@ -216,7 +216,7 @@ alias ipc='ip -c -br addr'
 alias simple='python /root/Works/Mains/SimpleHTTPServerWithUpload.py'
 alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN"'
 alias public='curl https://checkip.amazonaws.com/'
-alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git'
+alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git; cd -'
 
 #TP Tool Aliases
 alias LDAPtoHTTP='bash /root/Works/Mains/LDAPtoHTTP.sh'
