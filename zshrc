@@ -219,8 +219,8 @@ alias public='curl https://checkip.amazonaws.com/'
 
 #TP Tool Aliases
 alias LDAPtoHTTP='bash /root/Works/Mains/LDAPtoHTTP.sh'
-alias DropConnect1='ssh root@localhost -p 9091' #Dropbox Connections
-alias DropConnect2='ssh root@localhost -p 9092' #Dropbox Connections
+alias Drop-Connect-1='ssh kv@localhost -p 9001' #Dropbox Connections
+alias Drop-Connect-2='ssh kv@loclahost -p 9002' #Dropbox Connections
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
