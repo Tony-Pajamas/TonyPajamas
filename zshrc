@@ -220,8 +220,8 @@ alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com
 
 #TP Tool Aliases
 alias LDAPtoHTTP='bash /root/Works/Mains/LDAPtoHTTP.sh'
-alias Drop-1='ssh kv@localhost -p 9001' #Dropbox Connections
-alias Drop-2='ssh kv@loclahost -p 9002' #Dropbox Connections
+alias Drop-1='ssh drop@localhost -p 9001' #Dropbox Connections
+alias Drop-2='ssh drop@loclahost -p 9002' #Dropbox Connections
 alias ToDrop-1='/root/Works/Mains/CloudToDrop.sh 1'
 alias ToDrop-2='/root/Works/Mains/CloudToDrop.sh 2'
 alias ToCloud='/root/Works/Mains/DropToCloud.sh'
