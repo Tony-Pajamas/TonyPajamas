@@ -131,7 +131,7 @@ function TP {
 		return 1
 	fi
 
-	sprint ? "TP Folder Check: mkdir /root/Works; mkdir /root/Works/Mains; mkdir /root/Drops; mkdir /root/www"
+	sprint ? "TP Folder Check: mkdir /root/Works; mkdir /root/Works/Mains; chmod +rwx /root/Works/Mains; mkdir /root/Drops; mkdir /root/www"
 	ls /root/
 	echo ""
 }
