@@ -206,7 +206,7 @@ export GOROOT=/usr/local/go
 PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
 
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -ahl'
 alias la='ls -A'
 alias l='ls -CF'
 
