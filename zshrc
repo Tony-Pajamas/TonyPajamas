@@ -210,13 +210,19 @@ alias ll='ls -ahl'
 alias la='ls -A'
 alias l='ls -CF'
 
+
+#### TP SECTION
+#TP Sets
+export PATH="$PATH:/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+tpuser=$(whoami)
+
 #TP Aliases
 alias ipconfig='ip -c -br addr'
 alias ipc='ip -c -br addr'
 alias simple='python /root/Works/Mains/SimpleHTTPServerWithUpload.py'
 alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN"'
 alias public='curl https://checkip.amazonaws.com/'
-alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git; cd ~ && cp /opt/TonyPajamas/zshrc .'
+alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git; cd ~ && cp /opt/TonyPajamas/zshrc ./.zshrc; source .zshrc'
 
 #TP Tool Aliases
 alias LDAPtoHTTP='bash /root/Works/Mains/LDAPtoHTTP.sh'
@@ -225,9 +231,6 @@ alias Drop-2='ssh drop@localhost -p 9002' #Dropbox Connections
 alias ToDrop-1='/root/Works/Mains/CloudToDrop.sh 1'
 alias ToDrop-2='/root/Works/Mains/CloudToDrop.sh 2'
 alias ToCloud='/root/Works/Mains/DropToCloud.sh'
-
-#TP Extras
-export PATH="$PATH:/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 
 # enable auto-suggestions based on the history
