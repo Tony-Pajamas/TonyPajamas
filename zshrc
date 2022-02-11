@@ -226,6 +226,9 @@ alias ToDrop-1='/root/Works/Mains/CloudToDrop.sh 1'
 alias ToDrop-2='/root/Works/Mains/CloudToDrop.sh 2'
 alias ToCloud='/root/Works/Mains/DropToCloud.sh'
 
+#TP Extras
+export PATH="$PATH:/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
