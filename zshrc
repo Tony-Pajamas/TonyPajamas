@@ -231,7 +231,7 @@ alias Drop-2='ssh drop@localhost -p 9002' #Dropbox Connections
 alias ToDrop-1='/root/Works/Mains/CloudToDrop.sh 1'
 alias ToDrop-2='/root/Works/Mains/CloudToDrop.sh 2'
 alias ToCloud='/root/Works/Mains/DropToCloud.sh'
-
+alias ACSGSpace='ssh -i /root/.ssh/r-avkali kv@ACSGSpace -p 443'
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
