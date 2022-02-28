@@ -5,7 +5,7 @@
 #
 # scp -P 443 -i /home/drop/.ssh/drop-d1 Main-Targeted.nmap kv@ACSGSpace:/home/kv/Drops
 
-x=$(hostname | cut -d "2" -f 2)
+x=$(hostname | cut -d "-" -f 2)
 
 if [[ "$x" == "D1" ]]; then
   k="drop-d1"
