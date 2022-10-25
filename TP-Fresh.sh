@@ -134,6 +134,9 @@ function TP {
 	sprint ? "TP Folder Check: mkdir /root/Works; mkdir /root/Works/Mains; chmod +rwx /root/Works/Mains; mkdir /root/Drops; mkdir /root/www"
 	ls /root/
 	echo ""
+	
+	echo "curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py"
+	echo ""
 }
 
 
