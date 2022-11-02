@@ -14,6 +14,20 @@ echo ""
 echo "      Internal Testing Machine"
 echo ""
 
+
+echo "\033[1;31m
+  ██████╗░░██████╗
+  ██╔══██╗██╔════╝
+  ██████╔╝╚█████╗░
+  ██╔══██╗░╚═══██╗
+  ██║░░██║██████╔╝
+  ╚═╝░░╚═╝╚═════╝░\033[00m"
+
+echo ""
+echo "      Internal Testing Machine"
+echo ""
+
+
 #Last Logins
 USER=$(last -2 -w | head -2 | tail -1 | cut -d ' ' -f '1')
 IP=$(last -2 -w | head -2 | tail -1 | cut -d ' ' -f '16')
