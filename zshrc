@@ -132,7 +132,9 @@ if [ "$color_prompt" = yes ]; then
 			PROMPT=$P1
 			;;
 	esac
-
+	
+	#Override
+	PROMPT=$P1
     RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
 
     # enable syntax-highlighting
