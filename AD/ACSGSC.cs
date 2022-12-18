@@ -29,7 +29,7 @@ namespace KrbRelayUp.Relay.Attacks.Ldap
                 string dn2 = Console.ReadLine();
                 cert = GenerateSelfSignedCert(dn2);
             }
-            //string dn2 = "CN=L-GL8C0Z2,DC=Aveanna,DC=net";D
+            
             //Console.WriteLine("---- CURRENT DN ----" + dn);
 
             Console.WriteLine("[+] Certificate generated");
