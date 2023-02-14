@@ -257,7 +257,7 @@ U=$(eval echo ~$USER)
 #TP Aliases
 alias ipconfig='ip -c -br addr'
 alias ipc='ip -c -br addr'
-alias simple='python /root/Works/Mains/SimpleHTTPServerWithUpload.py'
+alias simple='python2 /root/Works/Mains/SimpleHTTPServerWithUpload.py'
 alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN"'
 alias public='curl https://checkip.amazonaws.com/'
 alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git; cd ~ && cp /opt/TonyPajamas/zshrc ./.zshrc; source .zshrc'
