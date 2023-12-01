@@ -36,5 +36,6 @@ Write-Host $RSART
 
 #### Main ####
 
-RSArt
+#RSArt
 speak "All I see is red" -ErrorAction SilentlyContinue
+start https://redseersecurity.com
