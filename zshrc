@@ -258,7 +258,7 @@ U=$(eval echo ~$USER)
 alias ipconfig='ip -c -br addr'
 alias ipc='ip -c -br addr'
 alias simple='python2 /root/Works/Mains/SimpleHTTPServerWithUpload.py'
-alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN"'
+alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN" | GREP_COLOR='01;32' grep --color=always -e "^" -e "ESTABLISHED"'
 alias public='curl https://checkip.amazonaws.com/'
 alias TPRC='rm -d -r -f /opt/TonyPajamas; cd /opt/; git clone https://github.com/Tony-Pajamas/TonyPajamas.git; cd ~ && cp /opt/TonyPajamas/zshrc ./.zshrc; source .zshrc'
 alias t0='sed -i -e '86s/TPrompt=[0-9]/TPrompt=1/' $U/.zshrc; sleep 1; source $U/.zshrc'
