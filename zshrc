@@ -250,7 +250,7 @@ alias l='ls -CF'
 
 #### TP SECTION
 #TP Sets
-export PATH="$PATH:/tmp:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:~/.local/bin"
 tpuser=$(whoami)
 U=$(eval echo ~$USER)
 
@@ -266,6 +266,7 @@ alias t1='sed -i -e '86s/TPrompt=[0-9]/TPrompt=1/' $U/.zshrc; sleep 1; source $U
 alias t2='sed -i -e '86s/TPrompt=[0-9]/TPrompt=2/' $U/.zshrc; sleep 1; source $U/.zshrc'
 alias t3='sed -i -e '86s/TPrompt=[0-9]/TPrompt=3/' $U/.zshrc; sleep 1; source $U/.zshrc'
 alias t4='sed -i -e '86s/TPrompt=[0-9]/TPrompt=4/' $U/.zshrc; sleep 1; source $U/.zshrc'
+alias pyenv='python3 -m venv venv;source venv/bin/activate'
 
 
 #TP Tool Aliases
