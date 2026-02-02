@@ -94,8 +94,8 @@ CURRENTIP1=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{
 P1=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}$(venv_info)(%B%F{%(#.cyan.blue)}%n%(#.💀.㉿)%m%b%F{%(#.blue.green)})─(%F{reset}$CURRENTIP1%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{blue}#.%F{blue}$)%b%F{reset} '
 
 # P2 - Multiple IP
-CURRENTIP2=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/|/g;p};ba' )
-#CURRENTIP2=$(ifconfig | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/|/g;p};ba' )
+CURRENTIP2=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/ | /g;p};ba' )
+#CURRENTIP2=$(ifconfig | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})' | sed -n ':a;N;${s/\n/ | /g;p};ba' )
 P2=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}$(venv_info)(%B%F{%(#.cyan.blue)}%n%(#.💀.㉿)%m%b%F{%(#.blue.green)})─(%F{reset}$CURRENTIP2%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\n└─%B%(#.%F{blue}#.%F{blue}$)%b%F{reset} '
 
 # P3 - Main + Date
