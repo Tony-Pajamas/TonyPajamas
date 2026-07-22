@@ -116,34 +116,66 @@ function initial {
 function TP {
 
 	if cat /etc/shells | grep bash >/dev/null; then
-		#rc="$HOME/.bashrc"
-		sprint ? "BASH installed: cp /opt/TonyPajamas/bashrc /root/.bashrc"
+		cp /opt/TonyPajamas/bashrc /root/.bashrc
+		sprint + "BASH installed: copied /opt/TonyPajamas/bashrc to /root/.bashrc"
 	else
 		sprint - "No BASH installed"
 		return 1
 	fi
 
 	if cat /etc/shells | grep zsh >/dev/null; then
-		#rc="$HOME/.bashrc"
-		sprint ? "ZSH installed: cp /opt/TonyPajamas/zshrc /root/.zshrc"
+		cp /opt/TonyPajamas/zshrc /root/.zshrc
+		sprint + "ZSH installed: copied /opt/TonyPajamas/zshrc to /root/.zshrc"
 	else
 		sprint - "No ZSH Installed"
 		return 1
 	fi
 
-	sprint ? "TP Folder Check: mkdir /root/Works; mkdir /root/Works/Mains; chmod +rwx /root/Works/Mains; mkdir /root/Drops; mkdir /root/www"
+	mkdir -p /root/Works /root/Works/Mains
+	chmod +rwx /root/Works/Mains
+	sprint + "TP Folder Check: created /root/Works, /root/Works/Mains"
 	ls /root/
 	echo ""
-	
-	echo "curl https://bootstrap.pypa.io/pip/2.7/get-pip.py --output get-pip.py"
-	echo ""
+
+}
+
+function extras {
+
+	clear; echo "" ; echo "---- Extra Tools ----"; echo ""
+
+	# pipx
+	if command -v pipx &>/dev/null; then
+		sprint + "pipx Installed: $(command -v pipx)"
+	else
+		sprint - "pipx not installed: apt-get install -y pipx"
+	fi
+
+	# jq
+	if command -v jq &>/dev/null; then
+		sprint + "jq Installed: $(command -v jq)"
+	else
+		sprint - "jq not installed: apt-get install -y jq"
+	fi
+
+	# SecLists
+	if [ -d /usr/share/seclists ]; then
+		sprint + "SecLists Installed: /usr/share/seclists"
+	else
+		sprint - "SecLists not installed: apt-get install -y seclists"
+	fi
 }
 
 
 ########## Main ##########
 
+if [ "$(id -u)" -ne 0 ]; then
+	sprint - "This script must be run as root. Please re-run with sudo or as root."
+	exit 1
+fi
+
 initial
 TP
+extras
 #banners
 
 sprint + "COMPLETE: Move Onto SSH Full SSH Server"
