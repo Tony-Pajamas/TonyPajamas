@@ -141,7 +141,7 @@ function TP {
 
 function extras {
 
-	clear; echo "" ; echo "---- Extra Tools ----"; echo ""
+	echo "" ; echo "---- Extra Tools ----"; echo ""
 
 	# pipx
 	if command -v pipx &>/dev/null; then
