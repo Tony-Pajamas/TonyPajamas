@@ -257,7 +257,7 @@ U=$(eval echo ~$USER)
 #TP Aliases
 alias ipconfig='ip -c -br addr'
 alias ipc='ip -c -br addr'
-alias simple='python2 /root/Works/Mains/SimpleHTTPServerWithUpload.py'
+alias simple='python /root/Works/Mains/SimpleHTTPServerWithUpload.py'
 alias ns='netstat -antp | grep --color=always -e "^" -e "LISTEN" | GREP_COLORS="mt=01;32" grep --color=always -e "^" -e "ESTABLISHED"'
 alias nsp='netstat -antp | awk '\''NR<=2 || ($6=="LISTEN" && $4 !~ /^(127\.|::1:|::ffff:127\.)/)'\'' | grep --color=always -e "^" -e "LISTEN"'
 alias nsl='netstat -antp | awk '\''NR<=2 || ($6=="LISTEN" && $4 ~ /^(127\.|::1:|::ffff:127\.)/)'\'' | grep --color=always -e "^" -e "LISTEN"'
